@@ -9,7 +9,15 @@ public class BackwardsString extends SpecialString {
 	@Override
 	public String funkifyText(String s) {
 		
-		return "";
+		String funkyS = "";
+		int sLength = s.length();
+		
+		for (int i = sLength -1; i > -1; i--) {
+			char schar = s.charAt(i);
+			funkyS += schar;
+		}
+		
+		return funkyS;
 	}
 
 }

@@ -9,7 +9,18 @@ public class MixedCapsString extends SpecialString{
 	@Override
 	public String funkifyText(String s) {
 		
-		return "";
+		int sLength = s.length();
+		String mixedS = "";
+		
+		for (int i = 0; i < sLength; i++) {
+			char schar = s.charAt(i);
+			if (i % 2 == 0) {
+				mixedS += (schar + "").toLowerCase();
+			} else {
+				mixedS += (schar + "").toUpperCase();
+			}
+		}
+		return mixedS;
 	}
 
 }
